@@ -12,7 +12,13 @@ const app=express();
 const port=process.env.port;
 console.log(port)
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin:[
+            "http://localhost:5173","https://your-project.vercel.app"],
+        credentials:true
+    }
+))
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
