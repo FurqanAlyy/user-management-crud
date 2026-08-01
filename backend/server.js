@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors(
     {
         origin:[
-            "http://localhost:5173","https://user-management-crud-opal.vercel.app/"],
+            "http://localhost:5173","https://user-management-crud-opal.vercel.app"],
         credentials:true
     }
 ))
